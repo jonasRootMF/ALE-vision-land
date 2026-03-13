@@ -11,7 +11,10 @@ const inter = Inter({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#0a0a12',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f9f9fc' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a12' },
+  ],
 }
 
 export const metadata: Metadata = {

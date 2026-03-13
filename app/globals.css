@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* ALE Visión — always dark */
-  --background: oklch(0.08 0.01 265);
-  --foreground: oklch(0.97 0.005 265);
-  --card: oklch(0.11 0.015 265);
-  --card-foreground: oklch(0.97 0.005 265);
-  --popover: oklch(0.11 0.015 265);
-  --popover-foreground: oklch(0.97 0.005 265);
-  --primary: oklch(0.6 0.22 278);
-  --primary-foreground: oklch(0.97 0.005 265);
-  --secondary: oklch(0.15 0.02 265);
-  --secondary-foreground: oklch(0.97 0.005 265);
-  --muted: oklch(0.15 0.02 265);
-  --muted-foreground: oklch(0.55 0.02 265);
-  --accent: oklch(0.55 0.22 290);
-  --accent-foreground: oklch(0.97 0.005 265);
+  /* ALE Visión — light theme */
+  --background: oklch(0.98 0.005 265);
+  --foreground: oklch(0.1 0.01 265);
+  --card: oklch(1 0.002 265);
+  --card-foreground: oklch(0.1 0.01 265);
+  --popover: oklch(1 0.002 265);
+  --popover-foreground: oklch(0.1 0.01 265);
+  --primary: oklch(0.5 0.22 278);
+  --primary-foreground: oklch(0.98 0.005 265);
+  --secondary: oklch(0.92 0.01 265);
+  --secondary-foreground: oklch(0.1 0.01 265);
+  --muted: oklch(0.93 0.01 265);
+  --muted-foreground: oklch(0.45 0.02 265);
+  --accent: oklch(0.5 0.22 290);
+  --accent-foreground: oklch(0.98 0.005 265);
   --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: oklch(0.97 0.005 265);
-  --border: oklch(0.2 0.02 265);
-  --input: oklch(0.18 0.02 265);
-  --ring: oklch(0.6 0.22 278);
+  --destructive-foreground: oklch(0.98 0.005 265);
+  --border: oklch(0.85 0.02 265);
+  --input: oklch(0.88 0.02 265);
+  --ring: oklch(0.5 0.22 278);
   --radius: 0.75rem;
 
   /* IAG colors */
@@ -32,9 +32,9 @@
   --iag-red: oklch(0.65 0.25 27);
 
   /* Brand accent */
-  --brand-indigo: oklch(0.6 0.22 278);
-  --brand-violet: oklch(0.55 0.22 290);
-  --brand-indigo-glow: oklch(0.6 0.22 278 / 0.25);
+  --brand-indigo: oklch(0.5 0.22 278);
+  --brand-violet: oklch(0.5 0.22 290);
+  --brand-indigo-glow: oklch(0.5 0.22 278 / 0.25);
 }
 
 .dark {
@@ -109,8 +109,12 @@
 /* Grid dot background */
 .grid-bg {
   background-image:
-    radial-gradient(circle, oklch(0.3 0.04 278 / 0.25) 1px, transparent 1px);
+    radial-gradient(circle, oklch(0.3 0.04 278 / 0.1) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+.dark .grid-bg {
+  background-image:
+    radial-gradient(circle, oklch(0.3 0.04 278 / 0.25) 1px, transparent 1px);
 }
 
 /* Glow ring for IAG indicator */
