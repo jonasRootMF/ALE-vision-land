@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy": "next build && echo 'www.vision.theia.com.mx' > out/CNAME && cp out/index.html out/200.html && npx surge out www.vision.theia.com.mx"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

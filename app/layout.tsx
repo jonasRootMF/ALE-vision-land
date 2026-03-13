@@ -1,12 +1,17 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
 })
+
+export const viewport: Viewport = {
+  themeColor: '#0a0a12',
+}
 
 export const metadata: Metadata = {
   title: 'ALE Visión — Monitoreo Visual con IA para Cámaras de Seguridad',
@@ -19,7 +24,6 @@ export const metadata: Metadata = {
     description: 'Supervisión inteligente para gasolineras, retail, almacenes y más.',
     type: 'website',
   },
-  themeColor: '#0a0a12',
 }
 
 export default function RootLayout({
@@ -28,9 +32,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans antialiased">
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
