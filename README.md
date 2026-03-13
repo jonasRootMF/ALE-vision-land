@@ -1,4 +1,4 @@
-# ale-vision-landing-page
+# ALE VISION Landing page
 
 ## Getting Started
 
