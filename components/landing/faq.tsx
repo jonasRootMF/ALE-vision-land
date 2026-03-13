@@ -87,7 +87,16 @@ export function FAQ() {
             Resolvemos tus dudas
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            ¿Tienes más preguntas? Escríbenos y te respondemos en menos de 24 horas.
+            ¿Tienes más preguntas?{' '}
+            <a
+              href="https://wa.me/5212222067664"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Escríbenos por WhatsApp
+            </a>{' '}
+            y te respondemos en minutos.
           </p>
         </motion.div>
 
