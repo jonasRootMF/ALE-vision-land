@@ -84,3 +84,34 @@ All visible UI text is in **Spanish**. Keep it consistent.
 `next.config.mjs` intentionally sets:
 - `typescript.ignoreBuildErrors: true` — type errors don't block deploys
 - `images.unoptimized: true` — static image serving
+- `output: 'export'` — fully static build, outputs to `out/`
+
+## Contact
+
+All contact CTAs point to WhatsApp: `https://wa.me/5212222067664`
+
+Pre-filled message used in main CTA buttons:
+```
+https://wa.me/5212222067664?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20ALE%20Visi%C3%B3n
+```
+
+There is no backend or email form — all leads go through WhatsApp.
+
+## Deployment
+
+### Heroku (primary)
+The app is hosted on Heroku under the existing app **`www-vision-theia-com-mx`**.
+
+To deploy:
+```bash
+heroku git:remote -a www-vision-theia-com-mx   # one-time setup
+git push heroku main
+```
+
+How it works:
+- `heroku-postbuild` script runs `next build` → generates `out/`
+- `Procfile` starts `serve out -p $PORT` to serve the static files
+- `NPM_CONFIG_PRODUCTION=false` must be set on the Heroku app so devDependencies install during build
+
+### Surge (legacy)
+The `deploy` script in `package.json` still deploys to Surge at `www.vision.theia.com.mx`. This was the previous deployment method.
