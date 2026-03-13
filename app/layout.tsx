@@ -1,0 +1,38 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: 'ALE Visión — Monitoreo Visual con IA para Cámaras de Seguridad',
+  description:
+    'Convierte tus cámaras en supervisión visual con IA. ALE Visión analiza capturas periódicas y genera un Índice de Apego General (IAG) para detectar desviaciones en tiempo real.',
+  keywords: ['monitoreo IA', 'cámaras seguridad', 'supervisión visual', 'SaaS', 'IAG'],
+  authors: [{ name: 'ALE Visión' }],
+  openGraph: {
+    title: 'ALE Visión — Monitoreo Visual con IA',
+    description: 'Supervisión inteligente para gasolineras, retail, almacenes y más.',
+    type: 'website',
+  },
+  themeColor: '#0a0a12',
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="es" className={inter.variable}>
+      <body className="font-sans antialiased">
+        {children}
+      </body>
+    </html>
+  )
+}
+
